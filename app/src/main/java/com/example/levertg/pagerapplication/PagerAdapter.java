@@ -13,13 +13,7 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        Fragment fragment = new TestFragment();
-        Bundle args = new Bundle();
-        // Our object is just an integer :-P
-        args.putInt(TestFragment.ARG_NUMBER, position + 1);
-        fragment.setArguments(args);
-        return fragment;
-
+        return TestFragment.newInstance(position+1);
     }
 
     @Override
